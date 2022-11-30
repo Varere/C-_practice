@@ -1,8 +1,9 @@
 ﻿Console.WriteLine("Введите трехзначное число");
 string input = Console.ReadLine()!;
-int n = int.Parse(input);
+int number = int.Parse(input);
 
-Console.WriteLine(n % 10);   
+number = number / 10;
+Console.WriteLine(number % 10);
 
 
 

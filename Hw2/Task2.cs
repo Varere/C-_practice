@@ -1,6 +1,5 @@
 Console.WriteLine("Введите число");
-string input = Console.ReadLine()!;
-int number = int.Parse(input);
+int number = int.Parse(Console.ReadLine()!);
 
 if (number < 0){
     number *= -1;

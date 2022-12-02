@@ -1,5 +1,5 @@
-﻿
-while(1){
+﻿int number;
+while(true){
     Console.WriteLine("Введите трехзначное число");
     int number = int.Parse(Console.ReadLine()!);
     if (number >= 100 && number < 1000) {

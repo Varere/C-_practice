@@ -1,12 +1,16 @@
-﻿int number;
-while(true){
-    Console.WriteLine("Введите трехзначное число");
-    number = int.Parse(Console.ReadLine()!);
-    if (number >= 100 && number < 1000) {
-        break;
-    } else {
-        Console.WriteLine("Некорректный ввод повторите попытку");
-    }
+﻿Console.WriteLine("Введите число");
+string input = Console.ReadLine()!;
+int number = int.Parse(input);
+
+if (number < 0){
+    number *= -1;
 }
-number /= 10;
-Console.WriteLine(number % 10);
+
+if (number < 100){
+    Console.WriteLine("Третьей цифры нет");
+} else {
+    while (number >= 1000){
+        number /= 10;
+    }
+    Console.WriteLine(number % 10);
+}

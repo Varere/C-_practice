@@ -1,4 +1,4 @@
-﻿int number;
+int number;
 
 while(true){
     Console.WriteLine("Введите пятизначное число");

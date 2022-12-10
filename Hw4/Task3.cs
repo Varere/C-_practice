@@ -1,33 +1,5 @@
-﻿/*void FillArray(int[] collection)
+int[] RandArr(int min, int max, int size)
 {
-    int lenght = collection.Length;
-    int index = 0;
-    while (index < lenght)
-    {
-        collection[index] = new Random().Next(0, 2);
-
-        index++;
-    }
-}
-
-void PrintArray(int[] col)
-{
-    int count = col.Length;
-    int position = 0;
-    while (position < count)
-    {
-        Console.Write(col[position] + " ");
-        position++;
-    }
-}
-
-
-int[] array = new int[8];
-FillArray(array);
-PrintArray(array);*/
-
-
-int[] RandArr (int min, int max, int size) {
     int[] NewArr = new int[size];
 
     for (int i = 0; i < size; i++)

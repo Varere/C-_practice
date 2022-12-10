@@ -12,10 +12,10 @@ int[] RandArr(int min, int max, int size)
 
 Console.WriteLine("Введите размер массива");
 int TempSize = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите максимум");
-int TempMax = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите минимум");
 int TempMin = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите максимум");
+int TempMax = int.Parse(Console.ReadLine()!);
 
 int[] MyArr = RandArr(TempMin, TempMax, TempSize);
 

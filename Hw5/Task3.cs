@@ -1,3 +1,6 @@
+// Переделал вывод массива и использовал Round
+
+
 double[] randarr(double min, double max, int size)
 {
     double[] newarr = new double[size];

@@ -1,4 +1,4 @@
-﻿double[] randarr(double min, double max, int size)
+double[] randarr(double min, double max, int size)
 {
     double[] newarr = new double[size];
 

@@ -1,58 +1,71 @@
-﻿double[] randarr(double min, double max, int size)
+﻿/*int[] randarr(int min, int max, int size)
 {
-    double[] newarr = new double[size];
+    int[] newarr = new int[size];
 
     for (int i = 0; i < size; i++)
     {
-        newarr[i] = Math.Round(new Random().NextDouble() * (max - min) + min, 2);
+        newarr[i] = new Random().Next(min, max + 1);
     }
 
     return newarr;
 }
 
-double deltamax(double[] arr)
+int[] CopyArray(int[] arr)
 {
-    double max = arr[0];
-    double min = arr[0];
+    int[] newCopy = new int[arr.Length];
+    for (int i = 0; i < newCopy.Length; i++)
+    {
+        newCopy[i] = arr[i];
+    }
+    return newCopy;
+}
+
+void PrintArray(int[] arr)
+{
+    Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] > max)
+        if (i < arr.Length - 1)
         {
-            max = arr[i];
+            Console.Write(arr[i] + ",");
         }
-        if (arr[i] < min)
+        else
         {
-            min = arr[i];
+            Console.Write(arr[i]);
         }
     }
-    double count = max - min;
-    return Math.Round(count, 2);
+    Console.WriteLine("]");
 }
 
 Console.WriteLine("Введите размер массива");
 int tempsize = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите минимум");
-double tempmin = double.Parse(Console.ReadLine()!);
+int tempmin = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите максимум");
-double tempmax = double.Parse(Console.ReadLine()!);
+int tempmax = int.Parse(Console.ReadLine()!);
 
-double[] myarr = randarr(tempmin, tempmax, tempsize);
+int[] myarr = randarr(tempmin, tempmax, tempsize);
+PrintArray(myarr);
+int[] copyedArr = CopyArray(myarr);
+PrintArray(copyedArr);*/
 
-Console.Write("[");
+Console.WriteLine("Введите b1");
+double b1 = double.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите k1");
+double k1 = double.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите b2");
+double b2 = double.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите k2");
+double k2 = double.Parse(Console.ReadLine()!);
 
-for (int i = 0; i < tempsize; i++)
-{
-    if (i < tempsize - 1)
-    {
-        Console.Write(myarr[i] + "; ");
-    }
-    else
-    {
-        Console.Write(myarr[i]);
-    }
+Console.Write(IntersectionPoint(b1,k1,b2,k2));
+
+
+Tuple<double, double> IntersectionPoint (double b1, double k1, double b2, double k2) {
+    Tuple<double, double> intPoint = new Tuple<double, double> ((b2-b1) / (k1 - k2),(k1 * (b2-b1) / (k1 - k2)) + b1);
+    return intPoint;
 }
 
-Console.WriteLine("]");
 
-Console.WriteLine(deltamax(myarr));
+
 

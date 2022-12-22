@@ -8,7 +8,8 @@ Print2DArray(matrix);
 PrintArray(AvgOfColumn(matrix));
 
 
-void PrintArray (double[] arr) {
+void PrintArray(double[] arr)
+{
     Console.Write("[");
 
     for (int i = 0; i < arr.Length; i++)
@@ -26,12 +27,15 @@ void PrintArray (double[] arr) {
     Console.WriteLine("]");
 }
 
-double[] AvgOfColumn (int[,] arr) {
+double[] AvgOfColumn(int[,] arr)
+{
     double[] avg = new double[arr.GetLength(1)];
     double temp = 0;
-    for (int i = 0; i < arr.GetLength(1); i++) {
-        for(int j = 0; j < arr.GetLength(0); j++) {
-            temp += arr[j,i];
+    for (int i = 0; i < arr.GetLength(1); i++)
+    {
+        for (int j = 0; j < arr.GetLength(0); j++)
+        {
+            temp += arr[j, i];
         }
         avg[i] = Math.Round(temp / arr.GetLength(0), 1);
         temp = 0;
